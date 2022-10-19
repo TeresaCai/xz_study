@@ -1,0 +1,53 @@
+@charset "utf-8";
+.box {
+  .a {
+    color: red
+  }
+
+  .b {
+    .a {
+      color: black
+    }
+  }
+}
+
+.list {
+  list-style: none;
+
+  li {
+    line-height: 20px;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  li:nth-child(odd) {
+    background-color: black
+  }
+
+  li:nth-child(even) {
+    background-color: red
+  }
+}
+
+.card {
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 10px;
+    overflow: hidden;
+
+    img {
+      float: left;
+    }
+
+    div {
+      float: left;
+      h3{font-size: 18px}
+      p{font-size: 14px}
+    }
+  }
+}

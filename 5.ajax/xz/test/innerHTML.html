@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px" width="100%">
+    <thead>
+    <th>编号</th>
+    <th>名称</th>
+    <th>价格</th>
+    <th>修改</th>
+    </thead>
+    <tbody id="tb">
+    <tr>
+        <td id="productlist" colspan="4" align="center">加载</td>
+    </tr>
+    </tbody>
+
+
+</table>
+<input type="button" id="bt1" value="按钮1"><br>
+<input type="button" id="bt2" value="按钮2"><br>
+<input type="button" id="bt3" value="按钮3"><br>
+<input type="button" id="bt4" value="按钮4"><br>
+<input type="button" id="bt5" value="按钮5"><br>
+
+</body>
+
+<script>
+    bt1.onclick = function () {
+        productlist.innerHTML = '已经加更多了'
+    }
+
+    bt2.onclick = function () {
+        let html = `<tr>
+        <td>1</td>
+        <td>华为</td>
+        <td>8</td>
+        <td><input type="button" value="删除"></td>
+    </tr>`
+        tb.innerHTML = html
+    }
+
+    bt3.onclick = function () {
+        let html = ``
+        for (var i = 0; i < 10; i++) {
+            html += `<tr>
+        <td>1</td>
+        <td>华为</td>
+        <td>8</td>
+        <td><input type="button" value="删除"></td>
+    </tr>`
+        }
+        tb.innerHTML = html
+    }
+
+
+    let data = [
+        {lid: 1, title: '华为', price: 8888},
+        {lid: 2, title: '苹果', price: 3333},
+        {lid: 3, title: 'OPPO', price: 7777}
+    ]
+    bt4.onclick = function () {
+        let html = ``
+        for (var i = 0; i < data.length; i++) {
+            html += `<tr>
+        <td>${data[i].lid}</td>
+        <td>${data[i].title}</td>
+        <td>${data[i].price}</td>
+        <td><input type="button" value="删除"></td>
+    </tr>`
+        }
+        tb.innerHTML = html
+    }
+
+
+    let jsonString = '[{"lid":1,"title":"苹果","price":13000}]'
+    let jsdata = JSON.parse(jsonString)
+
+    bt5.onclick = function () {
+        let html = ``
+        for (var i = 0; i < jsdata.length; i++) {
+            html += `<tr>
+        <td>${jsdata[i].lid}</td>
+        <td>${jsdata[i].title}</td>
+        <td>${jsdata[i].price}</td>
+        <td><input type="button" value="删除"></td>
+    </tr>`
+        }
+        tb.innerHTML = html
+    }
+
+
+
+
+
+</script>
+</html>

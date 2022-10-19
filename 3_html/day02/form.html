@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+
+
+<form method="get" action="">
+    文本输入框 <input type="text" placeholder="请输入密码" name="uname" value="zs">
+</form>
+
+<form>
+    <input type="password">
+</form>
+
+
+<!--//单选框-->
+<form>
+    <input type="radio" name="sex"> 男
+    <input type="radio" name="sex" checked> 女
+</form>
+
+<!--//复选框-->
+
+<form><input type="file" multiple></form>
+
+<form>
+    <input type="number" min="1" max="6" value="1">
+</form>
+
+
+<form action="" method="GET">
+    请输入邮箱<input type="email" name="email"/><br />
+    请选择颜色<input type="color" /><br />
+    请选择日期<input type="date" /><br />
+
+    <select name="address" id="city" >
+        <option value="0">请选择</option>
+        <option value="1">北京</option>
+        <option value="2">天津</option>
+        <option value="3">上海</option>
+        <option value="4">深圳</option>
+    </select><br />
+    文本域<textarea name="" cols="30" rows="5" style="resize: none;">
+			</textarea><br />
+
+    <input type="radio" name="sex" id="m" value="男"/>
+    <label for="m">男</label>
+    <br />
+    <input type="radio" name="sex" id="w" value="女"/>
+    <label for="w">女</label>
+    <br />
+
+    <input type="submit" value="专门提交form的按钮"/><br />
+    <input type="reset" /><br />
+    <input type="button" value="普通按钮"/><br />
+
+
+</form>
+
+</body>
+</html>

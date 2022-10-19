@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>商品列表</h4>
+<hr>
+<table border="1px" width="100%">
+    <tr>
+        <td>编号</td>
+        <td>名称</td>
+        <td>单价</td>
+        <td>操作</td>
+    </tr>
+    <tbody id="tb">
+    <tr>
+        <td id='productlist' colspan="4" align="center">点击下方按钮加载数据</td>
+    </tr>
+    </tbody>
+
+</table>
+<br>
+<button id="load_data">加载商品数据</button>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<select id="choose_page">
+    <option value="5">每页显示5数据</option>
+    <option value="10" selected>每页显示10数据</option>
+    <option value="15">每页显示15数据</option>
+    <option value="20">每页显示20数据</option>
+    <option value="50">每页显示50数据</option>
+</select>
+
+
+<script>
+
+    function delId(lid) {
+        let xhr = new XMLHttpRequest()
+        xhr.open('get', '/v2/product/del?lid='+lid)
+        xhr.onload = function () {
+            console.log(xhr.responseText)
+        }
+        xhr.send()
+    }
+
+
+    window.onload = function () {
+        let xhr = new XMLHttpRequest()
+        xhr.open('get', '/v2/product/list')
+        xhr.onload = function () {
+            let data = JSON.parse(xhr.responseText)
+            let html = ``
+            for (var i = 0; i < data.length; i++) {
+                html += `<tr>
+        <td>${data[i].lid}</td>
+        <td>${data[i].title}</td>
+        <td>${data[i].price}</td>
+        <td><input type="button" value="删除" onclick="delId(${data[i].lid})"></td>
+    </tr>`
+            }
+            tb.innerHTML = html
+        }
+        xhr.send()
+    }
+
+
+</script>
+
+
+</body>
+</html>

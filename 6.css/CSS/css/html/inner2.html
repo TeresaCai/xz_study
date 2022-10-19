@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 200px;
+        }
+
+        img:hover {
+            width: 300px;
+        }
+
+        button {
+            background-color: brown;
+        }
+
+        button:hover {
+            background-color: gold;
+        }
+
+        button:active {
+            background-color: darkgreen;
+        }
+
+
+        /*link visited hover active*/
+        a:link {
+            color: yellow;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        /*!*伪类选择器*!*/
+        /*!*    超链接未被点中*!*/
+        /*:link{*/
+
+        /*}*/
+        /*!* 鼠标悬停*!*/
+        /*:hover{*/
+
+        /*}*/
+        /*!*    选中超链接和按钮*!*/
+        /*:active{*/
+
+        /*}*/
+
+        /*!*    选中超链接被访问过后*!*/
+        /*:visited{*/
+
+        /*}*/
+
+        /*!*    选中输入焦点的输入框*!*/
+        /*:focus{*/
+
+        /*}*/
+        input {
+            border: 1px solid lightgreen;
+        }
+
+        input:focus {
+            border: 1px solid darkorange;
+        }
+
+    /*    属性选择器*/
+[readonly]{
+    border: 6px solid red;
+}
+[name='pwd']{
+background-color: pink;
+}
+    </style>
+
+</head>
+<body>
+<img src="../image/1GIF.jpg">
+<button>添加商品</button>
+
+<!--超链接-->
+<a href="www.jingdong.com">学习</a>
+<input type="text" readonly>
+<input type="text" name="pwd">
+</body>
+</html>

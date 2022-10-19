@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*.d1 > span {*/
+        /*    background-color: yellow;*/
+
+        /*}*/
+        p ~ div{
+background-color: pink;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="d1">
+    <span>我是div的子元素</span>
+    <p>我是p元素</p>
+    <div class="d2">
+        <span>我是div的子元素</span>
+        <div>
+            <span>我是d1的重孙子</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

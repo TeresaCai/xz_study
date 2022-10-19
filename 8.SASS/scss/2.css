@@ -1,0 +1,25 @@
+.box .a {
+  color: red;
+}
+.box .b .a {
+  color: black;
+}
+
+.list {
+  list-style: none;
+}
+.list li {
+  line-height: 20px;
+}
+.list li a {
+  text-decoration: none;
+  color: black;
+}
+.list li:nth-child(odd) {
+  background-color: black;
+}
+.list li:nth-child(even) {
+  background-color: red;
+}
+
+/*# sourceMappingURL=2.css.map */

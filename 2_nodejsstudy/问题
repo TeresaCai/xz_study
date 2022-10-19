@@ -1,0 +1,15 @@
+一、2.http.js新建方式从http.js里新建  2.http.js为什么变成undefined
+访问端口http://127.0.0.1:8080/study
+二 直接用express创建服务器 express=http
+三、拼接引号问题
+var user='king'
+pool.query('select * from emp where ename="'+user+'"', (err, result) => {
+    if (err) {
+        throw err
+    }
+    console.log(result)
+
+})
+四、result.affectedRows===0
+result.length===0
+

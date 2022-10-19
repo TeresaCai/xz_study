@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+      input{
+          outline: 0px;
+          border: 1px solid red;
+          padding: 5px 10px;
+          border-radius: 3px;
+      }
+      div{
+          width: 200px;
+          height: 30px;
+          border: 1px solid red;
+      }
+      .d1{
+          width: 100%;
+          border: 3px solid blue;
+          padding: 3px;
+          /*box-sizing: border-box;*/
+          box-sizing: content-box;
+      }
+  </style>
+</head>
+<body>
+<input type="text" placeholder="请输入">
+<div>
+    <input class='d1' type="text" />
+</div>
+</body>
+</html>

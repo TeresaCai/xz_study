@@ -1,0 +1,52 @@
+@charset "utf-8";
+$a: 100px;
+$b: center;
+$c: #ff0000;
+@mixin abc($w,$h) {
+  width: $w;
+  height: $h;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #222
+
+}
+
+@mixin yuan($a,$b) {
+  width: $a;
+  height: $a;
+  background-color: $b;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px #666;
+}
+
+
+
+@for $i from 1 to 5 {
+  ul li:nth-child(#{$i}) {
+    width: 50px * $i;
+  }
+}
+
+.y1 {
+  @include yuan(100px, red)
+}
+
+.y2 {
+  @include yuan(200px, blue)
+}
+
+.y3 {
+  @include yuan(50px, green)
+}
+
+.d1 {
+  width: $a;
+  text-align: $b;
+  color: $c;
+  $e: 50px;
+  height: $e;
+}
+
+.d2 {
+
+  @include abc(200px, 1200px);
+}

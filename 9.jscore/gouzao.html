@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Student(name,age,phone) {
+        var obj={}
+        obj.name=name
+        obj.age=age
+        obj.phone=phone
+        return obj
+    }
+    var s1=Student('格格',18,'10086')
+    var s2=Student('格格1',18,'10086')
+    var s3=Student('格格2',18,'10086')
+    console.log(s1,s2,s3)
+
+    function Reat(w,h) {
+        this.w=w
+        this.h=h
+        this.area=x
+
+    }
+    var x=function (){
+        console.log(this.w * this.h)
+    }
+    var r1=new Reat(3,10)
+    var r2=new Reat(10,9)
+    console.log(r1)
+        r1.area()
+    r2.area()
+
+</script>
+</body>
+</html>

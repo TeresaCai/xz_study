@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <title>Title</title>
+
+    <style>
+        .zdy-card .zdy-mark{
+            transition: 2s;
+        }
+        .zdy-card:hover .zdy-mark {
+            top: 0 !important;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="zdy-navtab">
+    <div class="container">
+        <h2 class="text-center">热门推荐</h2>
+        <ul class="nav nav-tabs justify-content-evenly">
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#a">第1-6个</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#b">第7-12个</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#c">第1-6个</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#d">第1-6个</button>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="a">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 ">
+
+                        <div class="card zdy-card position-relative overflow-hidden">
+
+                            <!--                            卡的遮罩-->
+                            <div class="position-absolute bg-primary top-100 w-100 h-100 rounded-2 bg-opacity-50 text-light zdy-mark"></div>
+
+                            <div class="card-img-top bg-secondary">
+                                <img src="../img/poke/001.png" alt="" class="w-50 d-block mx-auto">
+
+                            </div>
+                            <div class="card-body">
+                                <h5>妙蛙种子</h5>
+                                <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit.</p>
+                                <button class="btn btn-primary">GO GO GO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <img src="../img/poke/002.png" alt="" class="w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <img src="../img/poke/003.png" alt="" class="w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <img src="../img/poke/004.png" alt="" class="w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <img src="../img/poke/005.png" alt="" class="w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <img src="../img/poke/006.png" alt="" class="w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="b">222</div>
+            <div class="tab-pane" id="c">333</div>
+            <div class="tab-pane" id="d">444</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
